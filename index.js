@@ -23,3 +23,30 @@ function beyond(num) {
 // beyond(-1);
 // beyond(1);
 // beyond(0);
+
+
+function decode(code) {
+  let decodeWord = '';
+  const words = code.split(' ');
+  words.forEach(element => {
+    if (element[0] === 'a') {
+      decodeWord += element[1];
+    }
+    else if (element[0] === 'b') {
+      decodeWord += element[2];
+    }
+    else if (element[0] === 'c') {
+      decodeWord += element[3];
+    }
+    else if (element[0] === 'd') {
+      decodeWord += element[4];
+    }
+    else {
+      decodeWord += ' ';
+    }
+  });
+  return decodeWord;
+}
+
+// console.log(decode('craft block argon meter bells brown croon droop'));
+
