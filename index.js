@@ -82,8 +82,45 @@ function daysInMonth(month, leapYear = false) {
   return result;
 }
 
-try {
-  console.log(daysInMonth('fatbruary', true));
-} catch(e) {
-  console.log(e.message);
+// try {
+//   console.log(daysInMonth('fatbruary', true));
+// } catch(e) {
+//   console.log(e.message);
+// }
+
+
+function rockPaperScissors(num) {
+  const compChoice = Math.floor(Math.random() * 3) + 1;
+  if (compChoice === num) {
+    return 'Tied';
+  }
+  if (num === 1) {
+    if (compChoice === 2) {
+      return 'Computer Wins';
+    }
+    if (compChoice === 3) {
+      return 'Player Wins';
+    }
+  }
+  if (num === 2) {
+    if (compChoice === 3) {
+      return 'Computer Wins';
+    }
+    if (compChoice === 1) {
+      return 'Player Wins';
+    }
+  }
+  if (num === 3) {
+    if (compChoice === 1) {
+      return 'Computer Wins';
+    }
+    if (compChoice === 2) {
+      return 'Player Wins';
+    }
+  }
 }
+
+// console.log(rockPaperScissors(1));
+// console.log(rockPaperScissors(2));
+// console.log(rockPaperScissors(3));
+
